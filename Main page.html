@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Page</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+            </div>
+        </div>
+
+        <form id="register" class="input-group">
+            <label>Username</label>
+            <input type="text" class="input-field" required>
+            <label>Email Id</label>
+            <input type="email" class="input-field" required>
+            <label>Password</label>
+            <input type="password" class="input-field" required>
+            <label>Confirm Password</label>
+            <input type="password" class="input-field" required>
+            <input type="checkbox" class="check-box"><span>Remember Me</span><br>
+            <br>
+            <button id="submit" class="submit" type="submit">Register</button>
+        </form>
+   
+<!-------------------LOGIN PAGE ---------------------->
+
+    <form id="login" class="input-group">
+        <label>Email Id</label>
+        <input type="email" class="input-field" required>
+        <label>Password</label>
+        <input type="password" class="input-field" required>
+        <input type="checkbox" class="check-box"><span>Fogot Passwprd</span><br><br>
+        <button id="submit" class="submit" type="submit">Login</button>
+    </form>
+</div>
+
+
+<script>
+    var x = document.getElementById("register");
+    var y = document.getElementById("login");
+    var z = document.getElementById("btn");
+
+    function login(){
+        x.style.left = "-400px";
+        y.style.left = "10px";
+        z.style.left = "110px";
+    }
+
+    function register(){
+        x.style.left = "10px";
+        y.style.left = "450px";
+        z.style.left = "0px";
+    }
+
+</script>
+</body>
+</html>
